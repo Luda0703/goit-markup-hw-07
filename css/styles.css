@@ -92,6 +92,7 @@ ul {
 
 
 .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,6 +101,8 @@ ul {
 }
 
 .mobile-menu-open {
+    position: absolute;
+    right: 25px;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -108,7 +111,7 @@ ul {
 }
 
 .mobile-menu-open-icon {
-    display: inline-block;
+ display: inline-block; 
   width: 1em;
   height: 1em;
   stroke-width: 0;
@@ -130,7 +133,7 @@ ul {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-menu .is-open {
+.mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -139,13 +142,15 @@ ul {
 
 .mobile-menu-close-botton {
     position: absolute;
-    top: 24px;
-    right: 15px;
+    top: 40px;
+    right: 25px;
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     line-height: 0;
     border-radius: 50%;
+    width: 24px;
+    height: 24px;
 }
 
 .mobile-menu-close-icon {
@@ -166,13 +171,13 @@ ul {
    
 }
 
-.mobile-menu-list:only-child {
-    margin-bottom: 0;
-}
 
 .mobile-menu-link {
-    margin-bottom: 40px;
-    
+    margin-bottom: 40px;  
+}
+
+.mobile-menu-link:last-child {
+    margin-bottom: 0;
 }
 
 .mobile-menu-list-link {
@@ -182,6 +187,7 @@ ul {
     line-height: 1.1;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+    text-decoration: none;
 }
 
 .mobile-menu-list-link:hover,
@@ -196,6 +202,7 @@ ul {
     line-height: 1.1;
     letter-spacing: 0.02em;
     color: var(--text-color);
+    text-decoration: none;
 }
 
 .mobile-menu-tel:hover,
@@ -210,11 +217,50 @@ ul {
     line-height: 1.2;
     letter-spacing: 0.02edm;
     color: var(--text-color);
+    text-decoration: none;
 }
 
 .mobile-menu-mail:hover,
 .mobile-menu-mail:focus {
     color: var(--accent-color)
+}
+
+.mobile-menu-list-mail {
+    margin-bottom: 48px;
+}
+
+.mobile-menu-box {
+    display: flex;
+   padding: 0;
+   margin: 0;
+    justify-content: center;
+}
+
+.mobile-menu-box-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mobile-menu-box-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 56px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    
+}
+
+.mobile-menu-box-link:first-child {
+    margin-left: 0;
+}
+
+.mobile-menu-box-icon {
+    fill: var(--studio-color);
 }
 
 
