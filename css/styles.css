@@ -43,28 +43,20 @@ ul {
     
 }
 
-/*.container {
-    margin-right: auto;
-    margin-left: auto;
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px; 
-}*/
-
 .container {
     padding-left: 16px;
     padding-right: 16px; 
     
 }
 
-@media screen and (min-width: 480px) { 
+@media screen and (min-width: 428px) { 
     .container {
-        width: 480px;
+        width: 428px; 
         margin-right: auto;
         margin-left: auto;
-        
     }  
 }
+
 
 @media screen and (min-width: 768px) { 
     .container {
@@ -421,7 +413,7 @@ ul {
 }
 
 .hero-title {
-    max-width: 496px;
+    
     margin: auto;
     margin-top: 0;
     margin-bottom: 40px;
@@ -471,6 +463,7 @@ ul {
     }
 
     .hero-title {
+        max-width: 318px;
         margin-right: 55px;
         margin-left: 55px;
         margin-bottom: 72px;
@@ -906,12 +899,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     letter-spacing: 0.02em;
 }
 
-.footer-list {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
 
-}
 
 .footer-text {
     font-family: "Roboto", sans-serif;
@@ -1010,8 +998,22 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     transform: translate(0, -50%); 
 }
 
+.footer-list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+}
+
+@media screen and (min-width: 480px) {
+    
+    
+}
+
 @media screen and (max-width: 767px) {
     .footer {
+        display: block;
+        text-align: center;
         padding-top: 96px;
         padding-bottom: 96px;
     }
@@ -1028,15 +1030,11 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         margin-bottom: 72px;
     }
 
-    .footer-text {
-        display: block;
-        text-align: center;
-    }
-
     .conteiner-email {
         margin-left: 0;
     }
 
+    
     .footer-form {
         display: block;
         gap: 0; 
@@ -1055,6 +1053,16 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         margin-right: auto;
     }
 
+    .footer-logo {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-text {
+        display: block;
+        text-align: center;
+    }
+   
 }
 
 /*
