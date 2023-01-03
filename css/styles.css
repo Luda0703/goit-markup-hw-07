@@ -273,7 +273,6 @@ ul {
    line-height: 0;
    margin-left: auto;
    
-   
 }
 
 .mobile-menu-open-icon {
@@ -298,6 +297,7 @@ ul {
     justify-content: space-between;
     margin-right: auto;
     margin-left: auto;
+    overflow-y: scroll;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -339,17 +339,13 @@ ul {
 
 
 .mobile-menu-list {
-   margin-bottom: 284px;
+    margin-bottom: 284px;
    
 }
 
 
 .mobile-menu-link {
     margin-bottom: 40px;  
-}
-
-.mobile-menu-link:last-child {
-    margin-bottom: 0;
 }
 
 .mobile-menu-list-link {
@@ -399,6 +395,7 @@ ul {
 
 .mobile-menu-list-mail {
     margin-bottom: 48px;
+    
 }
 
 .mobile-menu-box {
