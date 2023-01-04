@@ -18,6 +18,12 @@ body {
     
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -153,7 +159,7 @@ ul {
 }
 
 
-.link .item:hover::after {
+.link .item::after {
     display: block;
     position: absolute;
     content: "";
@@ -165,9 +171,18 @@ ul {
     width: 100%;
     height: 4px;
     bottom: 0;
-    
-    background-color: var(--accent-color);
+    background-color: transparent;
     border-radius: 2px;
+    
+}
+
+.link .item:hover::after,
+.link .item:focus::after {
+    background-color: var(--accent-color);
+}
+
+.link .item:active::after {
+    background-color: var(--accent-color);
 }
 
 .auth-nev .address {
@@ -339,14 +354,15 @@ ul {
 
 
 .mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
     margin-bottom: 284px;
    
 }
 
 
-.mobile-menu-link {
-    margin-bottom: 40px;  
-}
 
 .mobile-menu-list-link {
     font-family: "Roboto", sans-serif;
@@ -361,6 +377,10 @@ ul {
 .mobile-menu-list-link:hover,
 .mobile-menu-list-link:focus {
     color: var(--button-color)
+}
+
+.mobile-menu-list-link:active {
+    color: var(--button-color);
 }
 
 .mobile-menu-tel {
@@ -394,7 +414,10 @@ ul {
 }
 
 .mobile-menu-list-mail {
-    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px
     
 }
 
@@ -408,22 +431,24 @@ ul {
 
 .mobile-menu-box-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    
+    gap: 56px;
+    margin-top: 48px;
 }
 
 .mobile-menu-box-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 56px;
+   
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: var(--accent-color);
     
 }
+
 
 .mobile-menu-box-link:first-child {
     margin-left: 0;
@@ -434,7 +459,16 @@ ul {
 }
 
 
+@media screen and (max-width: 443px) {
+    .mobile-menu-tel {
+    font-size: 24px;
+    }
 
+    .mobile-menu-box-list {
+        gap: 24px;
+    }
+
+}
 
 
 .hero {
@@ -443,7 +477,7 @@ ul {
     
     text-align: center;
 
-    max-width: 1600px;
+    max-width: 1440px;
   
     margin-left: auto;
     margin-right: auto;
@@ -628,14 +662,16 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
 @media screen and (min-width: 768px) and (max-width: 1140px) {
     .section-subtitle {
-        font-size: 36px;
-        line-height: 1.1;
+        font-size: 20px;
+        line-height: 1.2;
         margin-bottom: 8px;
     }
 
     .section-text {
         margin-bottom: 8px;
     }
+
+
 }
 
 
@@ -763,9 +799,8 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
 .team-list {
     display: flex;
-    justify-content: space-between;
-    padding-left: 16px;
-    padding-right: 16px;
+    justify-content: center;
+    
     gap: 24px;
 }
 
@@ -794,9 +829,8 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        grid-row: 72px;
-        padding-left: 82px;
-        padding-right: 82px;
+        
+        
     }
 
     .title {
@@ -822,18 +856,28 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
 }
 
-@media screen and (max-width: 1157px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
     .team {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        grid-gap: 72px;
+        grid-gap: 24px;
+        gap: 64px 24px;
     }
 
+    .title {
+        
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1157px) {
     .gadgets {
         display: none;
     }
+
 }
+
 /*
 .headline-text {
     font-size: 16px;
@@ -1066,9 +1110,10 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.06em;
+    gap: 16px
 }
 
-
+/*
 .footer-icon {
     display: block;
     position: absolute;
@@ -1076,7 +1121,8 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     top: 50%;
     right: 24px;
     transform: translate(0, -50%); 
-}
+}*/
+
 
 .footer-list {
     display: flex;
@@ -1162,7 +1208,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
     .container-end {
         margin-left: 24px; 
-        margin-bottom: 72px;
+        
     }
 
     .container-end:first-child {
@@ -1170,6 +1216,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     }
 
     .conteiner-email {
+        margin-top: 72px;
         margin-left: 0;
     }
 }
