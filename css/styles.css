@@ -374,8 +374,8 @@ ul {
     color: var(--button-color)
 }
 
-.mobile-menu-list-link:active {
-    color: var(--button-color);
+.mobile-menu-list-link.current {
+    color: var(--button-color)
 }
 
 .mobile-menu-tel {
@@ -1066,7 +1066,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 .footer-email {
     display: block;
     width: 264px;
-    height: 40px;
+   
     padding-left: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -1091,8 +1091,8 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     display: flex;
     align-items: center;
     top: 0;
-    width: 165px;
-    height: 40px;
+    
+    
     padding: 8px 24px;
     background-position: center;
     border-radius: 4px;
