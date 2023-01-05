@@ -18,11 +18,7 @@ body {
     
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+
 
 img {
     display: block;
@@ -52,7 +48,6 @@ ul {
 .container {
     padding-left: 15px;
     padding-right: 15px; 
-    
 }
 
 .header {
@@ -68,6 +63,8 @@ ul {
     padding: 0;
 
 }
+
+
 
 .color-web {
     
@@ -190,18 +187,12 @@ ul {
     
 } 
 
-
 @media screen and (min-width: 480px) { 
     .container {
-        width: 428px; 
+        width: 426px; 
         margin-right: auto;
         margin-left: auto;
     }  
-
-    .holder {
-        width: 480px;
-    }
-
 
 }
 
@@ -216,10 +207,9 @@ ul {
         display: none;
     }
 
-    
 
-    
 }
+
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
     .header {
@@ -231,8 +221,8 @@ ul {
 
     .auth-nev {
         flex-direction: column;
-        margin-left: 118px;
     }
+
 
     .auth-nev .copy {
         margin-left: 0;
@@ -504,6 +494,7 @@ ul {
     font-family: "Roboto", sans-serif;
     border-radius: 4px;
     padding: 16px 32px;
+    
     border: 1px solid transparent;
     font-weight: 500;
     font-size: 16px;
@@ -618,7 +609,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-bottom: 11px;
+    
     color: var(--text-color);
 }
 
@@ -659,12 +650,9 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
 @media screen and (min-width: 768px) and (max-width: 1140px) {
     .section-subtitle {
-        font-size: 20px;
-        line-height: 1.2;
-        margin-bottom: 8px;
-    }
-
-    .section-text {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.1;
         margin-bottom: 8px;
     }
 
@@ -826,20 +814,16 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        
+        gap: 72px 0;
+       
         
     }
 
     .title {
         margin-left: 0;
-        margin-bottom: 72px;
-        
-
+       
     }
 
-    .section-text {
-        margin-bottom: 8px;
-    }
 
     .subtitle-text {
         font-family: "Roboto", sans-serif;
@@ -976,13 +960,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         gap: 72px 24px;
         flex-wrap: wrap;
     }
-
-    .client-list-item {
-        flex-basis: calc((100%-48px)/3);
-        width: 100%;
-        max-width: 190px;
-        height: 88px;
-    }
+    
 }
 
 .footer {
@@ -1076,7 +1054,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 .footer-email {
     display: block;
     width: 264px;
-   
+   height: 40px;
     padding-left: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -1101,7 +1079,8 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     display: flex;
     align-items: center;
     top: 0;
-    
+    width: 168px;
+    height: 40px;
     
     padding: 8px 24px;
     background-position: center;
@@ -1384,11 +1363,11 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 408px;
-    max-height: 90vh;
+    height: 586px;
     background-color: #FCFCFC;
     
     padding: 72px 24px 24px 24px;
-    overflow-y: scroll;
+   
 }
 
 .modal-close-btn {
@@ -1434,12 +1413,13 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
 .modal-form-feald {
     
-    margin-bottom: 14px;
+    margin-bottom: 8px;
 }
 
 .modal-form-input {
     width: 100%;
-    max-width: 357px;
+    max-width: 360px;
+    height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 34px;
@@ -1578,8 +1558,8 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     align-self: center;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 51px;
+    width: 169px;
+    height: 56px;
     
     border-radius: 4px;
     background-color: var(--accent-color);
@@ -1610,7 +1590,8 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 @media screen and (max-width:443px) {
     .modal{
       width: 310px;
-      height: 588px;
+      height: 586px;
+      overflow-y: scroll;
     }
 
     .modal-form-input {
