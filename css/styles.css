@@ -404,7 +404,8 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 40px
+    gap: 40px;
+    margin-bottom: 48px;
     
 }
 
@@ -421,7 +422,7 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 56px;
-    margin-top: 48px;
+   
 }
 
 .mobile-menu-box-link {
@@ -457,6 +458,12 @@ ul {
 
 }
 
+
+@media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
 
 .hero {
     padding-top: 192px;
@@ -609,10 +616,13 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    
+    margin-bottom: 8px;
     color: var(--text-color);
 }
 
+.section-text.margen {
+    margin-bottom: 0;
+}
 
 @media screen and (max-width: 767px) {
     .section {
@@ -638,9 +648,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         margin-bottom: 0;
     }
 
-    .section-text {
-        margin-bottom: 0;
-    }
 
     .section.no-padding {
         padding: 0;
@@ -650,12 +657,11 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
 @media screen and (min-width: 768px) and (max-width: 1140px) {
     .section-subtitle {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.1;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
         margin-bottom: 8px;
     }
-
 
 }
 
@@ -772,7 +778,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
 .title {
     margin-left: 24px;
-    background-color: var(--studio-color);
+    background-color: var(--hero-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 }
@@ -964,8 +970,8 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 }
 
 .footer {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-color: var(--title-text-color);
 }
 
