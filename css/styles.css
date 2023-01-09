@@ -190,7 +190,7 @@ ul {
 
 @media screen and (min-width: 480px) { 
     .container {
-        
+        width: 426px;
         margin-right: auto;
         margin-left: auto;
     }  
@@ -1165,9 +1165,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     .conteiner-email {
         margin-left: auto;
         margin-right: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        
     }
 
     
@@ -1178,7 +1176,9 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     }
 
     .footer-email {
+        width: 100%;
         max-width: 396px;
+       margin: 0 auto;
         margin-bottom: 16px;
     
     }
